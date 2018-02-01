@@ -1,53 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <title> </title>
+  <title>MANUFACTUM Coffee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
   <style>
-    .dt {
-        display: table;
-    }
-
-    .dtc {
-        display: table-cell;
-    }
-
-    .fw6 {
-        font-weight: 600;
-    }
-
-    .vh-100 {
-        height: 100vh;
-    }
-
-    .w-100 {
-        width: 100%;
-    }
-
-    .white {
-        color: #fff;
-    }
-
-    .bg-dark-pink {
-        background-color: #d5008f;
-    }
-
-    .ph3 {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .tc {
-        text-align: center;
-    }
-
-    .f6 {
-        font-size: .875rem;
-    }
-
-    .v-mid {
-        vertical-align: middle;
-    }
+    .dt {display: table;}
+    .dtc {display: table-cell;}
+    .fw6 {font-weight: 600;}
+    .vh-100 {height: 100vh;}
+    .w-100 {width: 100%;}
+    .white {color: #fff;}
+    .bg-dark-pink {background-color: #d5008f;}
+    .ph3 {padding-left: 1rem; padding-right: 1rem;}
+    .tc {text-align: center;}
+    .f6 {font-size: .875rem;}
+    .v-mid {vertical-align: middle;}
 
     @media screen and (min-width: 30em) and (max-width: 60em) {
         .f2-m {
@@ -77,7 +44,7 @@
     <script>
     var ordermentumConfig = function () {
       return {
-        token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdXBwbGllcklkIjoiNDJkOWZiMDgtMjhhNS00Njk5LWE2Y2QtYWJhODNlMWZmZDMyIiwibm90aWZ5Ijoicm9zc0BzdGFsaS5jb20uYXUiLCJ0b2tlbiI6ImV5SjBlWEFpT2lKS1YxUWlMQ0poYkdjaU9pSklVekkxTmlKOS5leUpwWkNJNklqaGxaRFZsTkRGaExXSmxPREl0TkRJNU55MDRPV1psTFRrMk5UZGtaRFEyT0dFMFppSXNJbVZ0WVdsc0lqb2ljbTl6YzBCemRHRnNhUzVqYjIwdVlYVWlMQ0pwWVhRaU9qRTFNRE15TnpjMU9EaDkuZEJfVHR3ZTR1U2R5ZkI5Y25LZGlLUjhPb1NGajg0ekYtcmtSQXpJLXo4RSIsInVzZXJJZCI6IjhlZDVlNDFhLWJlODItNDI5Ny04OWZlLTk2NTdkZDQ2OGE0ZiIsImlhdCI6MTUwMzI3NzU4OH0.HgpD-xjM5bReQxQcNMF3UjHyJnh6K5K3ebAct2k0yZct2DGI178gc830YCrCd5r7NE-Nxq_-AWLWKk5UGAflu_Qtezy_7EKid1lrVfFJ8cDCNYWy7F_PqseSsVRddr9I-OENYONx_S6lhnKD-bBv7ZlkMqRav8voEgVRB7luhxrRXqP0BEROk9u_E5elVzREf0PZcg5z10YTTA4Lb4zkDBpM3izVbJm-hYh2YLSevjbUpD-pzxe7NmEzs5NcIgk9kE-ybRn0NUvT9CR7FnP2evybA-raLoeSc39TwUQbJyZFsFf3Mqs_CLFJfpn9GL9-vonYBWR1d-k4H09zeKI1rQ',
+        token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdXBwbGllcklkIjoiNDJkOWZiMDgtMjhhNS00Njk5LWE2Y2QtYWJhODNlMWZmZDMyIiwibm90aWZ5IjoiamFtZXNAc3RhbGkuY29tLmF1IiwidG9rZW4iOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpJVXpJMU5pSjkuZXlKcFpDSTZJalUzTVRBNFpXSXlMVEExTVdZdE5HWTBNaTFoWVRrNUxUQmtOR013T1RrNU9UVXpOeUlzSW1WdFlXbHNJam9pYW05bFFHOXlaR1Z5YldWdWRIVnRMbU52YlNJc0ltbGhkQ0k2TVRVeE56UTFPVEk1TjMwLjlvdzJmbHk0bEJPVGZ2NllIdERzTGk2SUhHRzFJUk5WNHRtOFdqNUhYOE0iLCJ1c2VySWQiOiI1NzEwOGViMi0wNTFmLTRmNDItYWE5OS0wZDRjMDk5OTk1MzciLCJpYXQiOjE1MTc0NTkyOTd9.h1Hb78PWo_f-fEQHnz_rQAOFoiZvD2aocs2jZAIQlnNBtVFvfcT62N4f1zwxuGhlhdOBIuyjI5ByXb5cuLQ3F8NUFoxZjYj-uFcCSQEZLg0WRgBlnBIKrogCtTnKMSub_3zm-reQ6q4qLj4I-soiAvGVZj8YsFqIj63Zutlej1roZZ7noQSocINlfsthuj1CXEoqLsp6nUKM58eP8e7CNUY56NHfJqgGmwnY6Km8s25kKBYycBmT3q6GY87aB9sYja-HVuHv9nX4a2UslH0bRinOW_lDtrj9tuePs5gWOjtRo0rumXVLdcP6JT8-iprB90-DJw8ejxHYeN5lQsEzsw',
         logo: 'https://ordermentum-res.cloudinary.com/image/upload/w_200,h_200,c_pad/v1503029069/u2aldzqrx7hl7fo1joqt.jpg',
         buttonLabel: 'Buy Manufactum',
       };
